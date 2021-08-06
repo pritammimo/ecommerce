@@ -129,5 +129,4 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
           : error.message,
     });
   }
-  // 7 min 10
 };
