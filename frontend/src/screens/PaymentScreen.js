@@ -10,7 +10,7 @@ const PaymentScreen = ({ history }) => {
   if(!shippingAddress){
       history.push('/shipping')
   }
-  const [paymentMethod, setPaymentMethod] = useState('PAyPal');
+  const [paymentMethod, setPaymentMethod] = useState('PayPal');
   const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
