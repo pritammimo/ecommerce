@@ -130,6 +130,6 @@ export const updateUserProfile = (user) => async (dispatch, getState) => {
         error.response && error.response.data.message
           ? error.response.data.message
           : error.message,
-    });
+    });//test
   }
 };
