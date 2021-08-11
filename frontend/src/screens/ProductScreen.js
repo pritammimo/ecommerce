@@ -36,9 +36,7 @@ const ProductScreen = ({ history,match}) => {
    const {loading,error,product}=productDetails
      const userLogin = useSelector((state) => state.userLogin);
      const {userInfo } = userLogin;
-   
-
-  const submitHandler = (e) => {
+   const submitHandler = (e) => {
     e.preventDefault();
     dispatch(
       createProductReview(match.params.id, {
