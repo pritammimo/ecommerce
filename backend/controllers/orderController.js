@@ -54,7 +54,11 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
   }
 });
 const getMyorders = asyncHandler(async (req, res) => {
-  const orders= await Order.find({user:req.user.id});
+  const orders= await Order.find({user:req.user._id});
   res.json(orders)
 });
-export {addOrderItems,getOrderById,updateOrderToPaid,getMyorders}
+const getOrders = asyncHandler(async (req, res) => {
+  const orders = await Order.find({}).populate('user','id name')
+  res.json(orders);
+});
+export {addOrderItems,getOrderById,updateOrderToPaid,getMyorders,getOrders}
