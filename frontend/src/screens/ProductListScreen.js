@@ -13,8 +13,8 @@ const ProductListScreen = ({ history,match }) => {
 
   const productList = useSelector((state) => state.productList);
   const { loading, error, products,page,pages} = productList;
-
-
+  console.log(page)
+  console.log(pages)
 const productDelete = useSelector((state) => state.productDelete);
 const {
   loading: loadingDelete,
